@@ -11,6 +11,7 @@ const movie = {
     "Type": "movie",
     "Poster": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
 }
+
 const App = () => {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
@@ -24,12 +25,12 @@ const App = () => {
     };
 
     useEffect(() => {
-        searchMovies('Movie');
+        searchMovies('John Wick');
     }, []);
 
     return (
         <div className='app'>
-            <h1>CineView</h1>
+            <h1 className='title'>CineView</h1>
             <div className='search'>
                 <input
                     placeholder='Search Movie'
